@@ -1,9 +1,9 @@
 <template>
-    <button :class=" 'button ' + type " @click="handleClick">
+    <a :class=" 'button ' + type " @click="handleClick">
         <!-- <Icon v-if="licon" :class="licon"/> -->
         <!-- <span v-if="isShowSpan">{{text}}</span> -->
         <span><slot></slot></span>
-    </button>
+    </a>
 </template>
 
 <script>
@@ -12,7 +12,7 @@
         props:{
             type:{
                 type: String,
-                default:'button'
+                default:''
             },
             size:{
                 type:String,
@@ -34,7 +34,6 @@
 
 <style lang="less">
     
-    @import '../atomui.less';
 
 </style>
 

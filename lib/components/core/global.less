@@ -1,10 +1,138 @@
-body{
-	//ios点击时的半透明背景，设置它为透明色
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	//禁止文字自适应大小
-	-webkit-text-size-adjust: none;
-	//平滑滚动
-	-webkit-overflow-scrolling:touch;
-	word-break: break-all;
-	word-wrap: break-word;
+::selection {
+    background: @primary;
+    color: @white;
+}
+
+::-webkit-input-placeholder {
+    color: @placeholder;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+    font-size: @font-size-md;
+    font-family: @font-family;
+    color: @default-black;
+    background-color: @white;
+    word-break: break-all;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    color: @link-color;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+i {
+    font-style: normal;
+}
+
+i,
+span,
+label,
+small {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    overflow: visible;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+    list-style: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    /*为了兼容部分手机input[button]-webkit-inline-box水平居中不工作的问题*/
+    display: inline-block;
+}
+
+textarea {
+    resize: none;
+}
+
+canvas {
+    display: inline-block;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+dfn {
+    font-style: italic;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+br {
+    clear: both;
+}
+
+small {
+    font-size: 80%;
+    color: @placeholder;
 }
