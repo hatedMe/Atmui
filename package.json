@@ -1,7 +1,7 @@
 {
-  "name": "atomui",
+  "name": "atmui",
   "version": "0.0.1",
-  "description": "atomui",
+  "description": "atmui",
   "author": "Atom <7548764@qq.com>",
   "main": "dist/Atomui.js",
   "scripts": {
