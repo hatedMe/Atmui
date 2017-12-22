@@ -1,6 +1,6 @@
 <template>
-    <a :class=" 'button ' + type " @click="handleClick">
-        <!-- <Icon v-if="licon" :class="licon"/> -->
+    <a :class=" 'button ' + type + ( long ? ' block' : '') + ( outline ? ' outline' : '' ) " @click="handleClick" >
+        <Icon v-if="licon" :class="licon" />
         <!-- <span v-if="isShowSpan">{{text}}</span> -->
         <span><slot></slot></span>
     </a>
@@ -18,9 +18,17 @@
                 type:String,
                 default:''
             },
-            text:{
+            long:{
+                type:Boolean,
+                default:false
+            },
+            licon:{
                 type:String,
-                default:'asas'
+                default:''
+            },
+            outline:{
+                type:Boolean,
+                default:false
             }
         },
         methods:{

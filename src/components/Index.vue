@@ -9,7 +9,7 @@
                     <router-link to="/">按钮</router-link>
                 </li>
                 <li>
-                    <router-link to="/">图标</router-link>
+                    <router-link to="/button">图标</router-link>
                 </li>
                 <li>
                     <router-link to="/">输入框</router-link>
@@ -27,7 +27,7 @@
                 <li>
                     <router-link to="/">示例</router-link>
                 </li>
-                <li>
+                <li @click="clickHandle">
                     <router-link to="/">关于</router-link>
                 </li>
             </ul>
@@ -38,6 +38,11 @@
 <script>
     export default {
         name: 'Index',
+        methods: {
+            clickHandle(){
+                this.$Alert()
+            }
+        }
     }
 </script>
 
