@@ -40,7 +40,14 @@
         name: 'Index',
         methods: {
             clickHandle(){
-                this.$Alert()
+                this.$Alert.show({
+                    onSubmit:function(){
+                        console.log( 123 );
+                    },
+                    onCancel:function(){
+                        console.log( 456 );
+                    }
+                })
             }
         }
     }

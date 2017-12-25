@@ -1,0 +1,61 @@
+
+.alert-mask{
+	z-index:10;
+}
+.alert{
+	position:absolute;
+	border-style:solid;
+	border-width:0;
+
+	top:50%;
+	left:50%;
+    width: 270px;
+	border-radius:@6px;
+	margin: 0 auto;
+	visibility:hidden;
+	opacity:0;
+	transform:translate(-50%,-50%) scale(0, 0);
+	transition-property:-webkit-transform,opacity,visibility;
+	transition-duration:300ms;
+
+	background-color:white;
+	border-color:@default-color;
+	
+	h1{
+		text-align: center;
+		padding:@15px 0 @5px 0;
+		font-weight: 500;
+		font-size: @font-size-lg;
+		text-align: center;
+	}
+
+	&.active{
+		visibility:visible;
+		opacity:1;
+		transform:translate(-50%,-50%) scale(1, 1);
+	}
+}
+//内容区域
+.alert-content{
+	display: block;
+	padding: @10px @12px @15px @12px;
+	line-height: 1.2em;
+	word-wrap: break-word;
+}
+//底部按钮区
+.alert-handler{
+	position: relative;
+	display:block;
+	text-align:center;
+	white-space:nowrap;
+	font-size:0;
+	a{
+		position: relative;
+		width:50%;
+		border-width:0;
+		display:inline-block;
+		padding:@12px;
+		font-size:@font-size-md;
+		box-sizing:border-box;
+	}
+}
