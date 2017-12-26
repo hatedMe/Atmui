@@ -13,8 +13,8 @@
                 default: ''
             },
             size: {
-                type: Number,
-                default: 16
+                type: String,
+                default: '16'
             }
         }
     }

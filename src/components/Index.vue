@@ -12,7 +12,10 @@
                     <router-link to="/button">图标</router-link>
                 </li>
                 <li>
-                    <router-link to="/">输入框</router-link>
+                    <router-link to="/battab">battab</router-link>
+                </li>
+                <li>
+                    <router-link to="/tab">tab</router-link>
                 </li>
             </ul>
         </main>
