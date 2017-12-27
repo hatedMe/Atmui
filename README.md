@@ -4,7 +4,7 @@
 
 
 <p align="center">
-    <img src="https://github.com/wangdahoo/Atmui/raw/master/logo.png">
+    <img src="https://github.com/hatedMe/Atmui/raw/master/logo.png">
 </p>
 
 <p align="center">
