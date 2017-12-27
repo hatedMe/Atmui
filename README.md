@@ -26,6 +26,7 @@
 - Input
 - Loading
 - Tab
+- List
 
 
 ## Getting started

@@ -9,7 +9,8 @@ import BarTab from '../components/BarTab/BarTab.vue';
 import Tab from '../components/Tab/Tab.vue';
 
 
-import Loading from '../components/Loading/Loading.vue'
+import Loading from '../components/Loading/Loading.vue';
+import List from '../components/List/List.vue';
 
 Vue.use(Router)
 
@@ -34,5 +35,9 @@ export default new Router({
         path: '/loading',
         name: 'Loading',
         component: Loading
+    },{
+        path: '/list',
+        name: 'list',
+        component: List
     }]
 })
