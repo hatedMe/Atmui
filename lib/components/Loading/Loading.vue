@@ -17,7 +17,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <p class="loading-floating-text"> {{ text }} </p>
+            <p class="loading-floating-text">{{ text }}</p>
         </div>
     </div>
 </template>
@@ -30,7 +30,21 @@
         props:{
             text:{
                 type:String,
-                default:'加载中'
+                default : '加载中'
+            }
+        },
+        destroyed () {
+            document.body.removeChild(this.$el)
+        },
+        methods: {
+            show(config){
+                this.text = typeof config == 'object' ? config.text : this.text;
+                document.body.appendChild(this.$el);
+            },
+            hide(){
+                setTimeout(() => {
+                    this.$destroy()
+                })
             }
         }
     }
