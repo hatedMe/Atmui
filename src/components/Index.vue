@@ -17,6 +17,10 @@
                 <li>
                     <router-link to="/tab">tab</router-link>
                 </li>
+                <li>
+                    <router-link to="/loading">loading</router-link>
+                </li>
+                
             </ul>
         </main>
         <footer>
