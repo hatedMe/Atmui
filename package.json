@@ -1,6 +1,6 @@
 {
   "name": "atmui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "atmui",
   "author": "Atom <7548764@qq.com>",
   "main": "dist/Atomui.js",
@@ -11,6 +11,13 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatedMe/Atmui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hatedMe/Atmui/issues"
   },
   "license": "MIT",
   "dependencies": {
