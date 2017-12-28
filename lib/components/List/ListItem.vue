@@ -2,16 +2,26 @@
 
 <template>
     <li class="list-item">
-        <div class="list-item-inner">
+        <div v-if="!to" class="list-item-inner">
             <p class="list-main-title">
-            <Icon v-if="licon" :type="licon" size="24" />
-            <slot>{{ mainTitle }}</slot>
-        </p>
-        <p class="list-item-after">
-            <span v-if="subtitle">{{ subtitle }}</span>
-            <Icon type="icon-enter" size="20" />
-        </p>
+                <Icon v-if="licon" :type="licon" size="24" />
+                <slot>{{ mainTitle }}</slot>
+            </p>
+            <p class="list-item-after">
+                <span v-if="subtitle">{{ subtitle }}</span>
+                <Icon type="icon-enter" size="20" />
+            </p>
         </div>
+        <router-link v-else :to="to" class="list-item-inner">
+            <p class="list-main-title">
+                <Icon v-if="licon" :type="licon" size="24" />
+                <slot>{{ mainTitle }}</slot>
+            </p>
+            <p class="list-item-after">
+                <span v-if="subtitle">{{ subtitle }}</span>
+                <Icon type="icon-enter" size="20" />
+            </p>
+        </router-link>
     </li>
 </template>
 
@@ -28,9 +38,13 @@
                 type: String,
                 default: ''
             },
-            licon:{
-                type:String,
-                default:''
+            licon: {
+                type: String,
+                default: ''
+            },
+            to:{
+                type: String,
+                default: ''
             }
         }
     }

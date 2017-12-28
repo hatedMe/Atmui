@@ -23,6 +23,9 @@
                 <li>
                     <router-link to="/list">list</router-link>
                 </li>
+                <li>
+                    <router-link to="/utils">utils</router-link>
+                </li>
             </ul>
         </main>
         <footer>
@@ -48,13 +51,13 @@
     export default {
         name: 'Index',
         methods: {
-            clickHandle(){
+            clickHandle() {
                 this.$Alert.show({
-                    onSubmit:function(){
-                        console.log( 123 );
+                    onSubmit: function() {
+                        console.log(123);
                     },
-                    onCancel:function(){
-                        console.log( 456 );
+                    onCancel: function() {
+                        console.log(456);
                     }
                 })
             }

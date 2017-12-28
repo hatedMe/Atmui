@@ -12,6 +12,8 @@ import Tab from '../components/Tab/Tab.vue';
 import Loading from '../components/Loading/Loading.vue';
 import List from '../components/List/List.vue';
 
+import Utils from '../components/Utils/Utils.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -39,5 +41,15 @@ export default new Router({
         path: '/list',
         name: 'list',
         component: List
+    },{
+        path: '/utils',
+        name: 'Utils',
+        component: Utils,
+        children:[
+            {
+                path: 'loading',
+                component: Loading
+            }
+        ]
     }]
 })
