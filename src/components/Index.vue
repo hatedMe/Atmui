@@ -4,29 +4,6 @@
             header
         </header>
         <main>
-            <!-- <ul>
-                    <li>
-                        <router-link to="/">按钮</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/button">图标</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/battab">battab</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/tab">tab</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/loading">loading</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/list">list</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/utils">utils</router-link>
-                    </li>
-                </ul> -->
             <Lists>
                 <ListItem to="/button" licon="icon-remind">Button按钮组件</ListItem>
                 <ListItem to="/tab" licon="icon-integral">Tab组件</ListItem>
@@ -38,7 +15,9 @@
             <Lists>
                 <ListItem licon="icon-like">Loading加载</ListItem>
                 <ListItem licon="icon-interactive">Tost遮罩</ListItem>
-                <ListItem licon="icon-like">时间选择</ListItem>
+                <ListItem licon="icon-like">Time时间选择</ListItem>
+                <ListItem to="/calendar" licon="icon-like">Calendar日历</ListItem>
+                
                 <ListItem licon="icon-interactive">Alert弹框</ListItem>
             </Lists>
         </main>
@@ -57,16 +36,6 @@
     export default {
         name: 'Index',
         methods: {
-            // clickHandle() {
-            //     this.$Alert.show({
-            //         onSubmit: function() {
-            //             console.log(123);
-            //         },
-            //         onCancel: function() {
-            //             console.log(456);
-            //         }
-            //     })
-            // }
         }
     }
 </script>

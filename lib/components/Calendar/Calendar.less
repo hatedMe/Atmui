@@ -1,0 +1,46 @@
+
+
+
+
+
+
+.calendar{
+    margin:40px 20px ;
+    height: 100%;
+    background-color: white;
+}
+
+.calendar .calendar-title{position: relative;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align:center;
+    border-bottom: 1px solid #ddd;}
+    .calendar-week{
+        .flex; 
+        .flex-between; 
+        .flex-middle;
+        padding: 12px 0;
+        span{
+            width: 100% / 7;
+            text-align: center;
+            color: @default-color;
+            
+        }
+    }
+    .calendar-day{
+        flex-wrap:wrap;
+        span{
+            display: inline-block;
+            float: left;
+            width: 100% / 7;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            &.active{
+                border-radius: 100%;
+                background-color: green;
+                color: white;
+            }
+        }
+    }
