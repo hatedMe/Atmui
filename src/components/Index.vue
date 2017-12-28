@@ -4,45 +4,51 @@
             header
         </header>
         <main>
-            <ul>
-                <li>
-                    <router-link to="/">按钮</router-link>
-                </li>
-                <li>
-                    <router-link to="/button">图标</router-link>
-                </li>
-                <li>
-                    <router-link to="/battab">battab</router-link>
-                </li>
-                <li>
-                    <router-link to="/tab">tab</router-link>
-                </li>
-                <li>
-                    <router-link to="/loading">loading</router-link>
-                </li>
-                <li>
-                    <router-link to="/list">list</router-link>
-                </li>
-                <li>
-                    <router-link to="/utils">utils</router-link>
-                </li>
-            </ul>
+            <!-- <ul>
+                    <li>
+                        <router-link to="/">按钮</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/button">图标</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/battab">battab</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/tab">tab</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/loading">loading</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/list">list</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/utils">utils</router-link>
+                    </li>
+                </ul> -->
+            <Lists>
+                <ListItem to="/button" licon="icon-remind">Button按钮组件</ListItem>
+                <ListItem to="/tab" licon="icon-integral">Tab组件</ListItem>
+                <ListItem licon="icon-manage">Icon图标组件</ListItem>
+                <ListItem to="/list" licon="icon-other">List列表组件</ListItem>
+                <ListItem licon="icon-send">Input表单组件</ListItem>
+            </Lists>
+
+            <Lists>
+                <ListItem licon="icon-like">Loading加载</ListItem>
+                <ListItem licon="icon-interactive">Tost遮罩</ListItem>
+                <ListItem licon="icon-like">时间选择</ListItem>
+                <ListItem licon="icon-interactive">Alert弹框</ListItem>
+            </Lists>
         </main>
         <footer>
-            <ul>
-                <li>
-                    <router-link to="/">基础</router-link>
-                </li>
-                <li>
-                    <router-link to="/">组件</router-link>
-                </li>
-                <li>
-                    <router-link to="/">示例</router-link>
-                </li>
-                <li @click="clickHandle">
-                    <router-link to="/">关于</router-link>
-                </li>
-            </ul>
+            <BarTab>
+                <BarTabItem licon="icon-remind" size="28">基础</BarTabItem>
+                <BarTabItem licon="icon-integral" size="28">组件</BarTabItem>
+                <BarTabItem licon="icon-document" size="28">示例</BarTabItem>
+                <BarTabItem licon="icon-accessory" size="28">关于</BarTabItem>
+            </BarTab>
         </footer>
     </div>
 </template>
@@ -51,16 +57,16 @@
     export default {
         name: 'Index',
         methods: {
-            clickHandle() {
-                this.$Alert.show({
-                    onSubmit: function() {
-                        console.log(123);
-                    },
-                    onCancel: function() {
-                        console.log(456);
-                    }
-                })
-            }
+            // clickHandle() {
+            //     this.$Alert.show({
+            //         onSubmit: function() {
+            //             console.log(123);
+            //         },
+            //         onCancel: function() {
+            //             console.log(456);
+            //         }
+            //     })
+            // }
         }
     }
 </script>
@@ -92,18 +98,10 @@
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         position: absolute;
-        bottom: 40px;
+        bottom:52px;
         width: 100vw;
         top: 40px;
-        ul {
-            height: 2000px;
-        }
-        li {
-            padding: 12px 8px;
-        }
-        a {
-            color: #333;
-        }
+        background-color: #f3f3f3;
     }
     footer {
         position: absolute;
