@@ -27,6 +27,7 @@
 - Loading
 - Tab
 - List
+- TabBar
 
 
 ## Getting started
