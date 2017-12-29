@@ -36,6 +36,8 @@
                 <span>2</span>
                 <span>3</span>
             </div>
+
+            <button @click="clickHandle">anniudianji</button>
         </div>
     </div>
 </template>
@@ -43,7 +45,18 @@
 
 
 <script>
+    import datt from './Calendar.js';
     export default {
-        name: 'Calendar'
+        name: 'Calendar',
+        data () {
+            return {
+                datt:[]
+            }
+        },
+        methods: {
+            clickHandle(){
+                console.log( datt() );
+            }
+        }
     }
 </script>
