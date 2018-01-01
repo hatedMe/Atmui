@@ -26,7 +26,7 @@
                 <span>六</span>
             </div>
             <div class="calendar-day flex">
-                <span>26</span>
+                <!-- <span>26</span>
                 <span>27</span>
                 <span>28</span>
                 <span class="active">29</span>
@@ -34,7 +34,9 @@
                 <span>31</span>
                 <span>1</span>
                 <span>2</span>
-                <span>3</span>
+                <span>3</span> -->
+                <span v-for="item in datt" v-if="item.wk == 0 || item.wk == 6"></span>
+                <span v-for="item in datt" v-else="item.wk == 0 || item.wk == 6">{{ item.day }}</span>
             </div>
 
             <button @click="clickHandle">anniudianji</button>
@@ -55,7 +57,8 @@
         },
         methods: {
             clickHandle(){
-                console.log( datt() );
+                this.datt = datt()
+                //console.log( datt() );
             }
         }
     }
