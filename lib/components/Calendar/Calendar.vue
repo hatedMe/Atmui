@@ -25,21 +25,12 @@
                 <span>五</span>
                 <span>六</span>
             </div>
-            <div class="calendar-day flex">
-                <!-- <span>26</span>
-                <span>27</span>
-                <span>28</span>
-                <span class="active">29</span>
-                <span>30</span>
-                <span>31</span>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span> -->
-                <span v-for="item in datt" v-if="item.wk == 0 || item.wk == 6"></span>
-                <span v-for="item in datt" v-else="item.wk == 0 || item.wk == 6">{{ item.day }}</span>
+            <div class="calendar-day flex" @click="changeDay" v-focusss="touchHandle">
+                <span class="no-date" v-for="item in datt" v-if="item.wk == undefined && item.today == undefined">{{ item.day }}</span>
+                <span class="active_wk" v-else-if="(item.wk != undefined) && (item.wk == 0 || item.wk == 6)">{{ item.day }}</span>
+                <span class="today active" v-else-if="item.today != undefined">{{ item.day }}</span>
+                <span v-else>{{ item.day }}</span>
             </div>
-
-            <button @click="clickHandle">anniudianji</button>
         </div>
     </div>
 </template>
@@ -48,17 +39,35 @@
 
 <script>
     import datt from './Calendar.js';
+    import TouchEvent from '../../util/TouchEvent.js';
     export default {
         name: 'Calendar',
         data () {
             return {
-                datt:[]
+                datt:datt()
             }
         },
+        mounted () {
+            //this.datt = datt();
+        },
         methods: {
-            clickHandle(){
-                this.datt = datt()
-                //console.log( datt() );
+            changeDay(event){
+                // TouchEvent(document , 'tap' , function(){
+                //     console.log( 789  );
+                // });
+                let els = event.target.parentNode.children;
+
+                for( let i =0; i<els.length; i++ ){
+                    if( els[i].classList.contains( 'active' ) ){
+                        els[i].classList.remove('active');
+                        break ;
+                    }
+                }
+                
+                event.target.classList.add('active');
+            },
+            touchHandle(){
+                console.log( 456 );
             }
         }
     }

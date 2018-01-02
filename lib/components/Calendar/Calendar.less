@@ -1,6 +1,11 @@
 .calendar {
-    margin: 40px 20px;
-    height: 100%;
+    // margin: 40px 20px;
+    // height: 100%;
+    position: absolute;
+    bottom: 40px;
+    top: 40px;
+    left: 20px;
+    right: 20px;
     background-color: white;
 }
 
@@ -39,5 +44,16 @@
             background-color: green;
             color: white;
         }
+        &.active_wk{
+            color: red;
+        }
+        
+    }
+    .no-date{
+        color: #999999;
+        visibility: hidden;
+    }
+    .today{
+        color: green;
     }
 }
