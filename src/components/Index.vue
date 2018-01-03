@@ -10,6 +10,7 @@
                 <ListItem licon="icon-manage">Icon图标组件</ListItem>
                 <ListItem to="/list" licon="icon-other">List列表组件</ListItem>
                 <ListItem licon="icon-send">Input表单组件</ListItem>
+                <ListItem to="/switch" licon="icon-send">Switch组件</ListItem>
             </Lists>
 
             <Lists>

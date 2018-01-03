@@ -15,6 +15,7 @@ import List from '../components/List/List.vue';
 import Calendar from '../components/Calendar/Calendar.vue';
 
 import Utils from '../components/Utils/Utils.vue';
+import Switchs from '../components/Switchs/Switchs.vue';
 
 Vue.use(Router)
 
@@ -57,5 +58,9 @@ export default new Router({
                 component: Loading
             }
         ]
+    },{
+        path: '/switch',
+        name:'switchs',
+        component: Switchs
     }]
 })

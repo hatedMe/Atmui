@@ -1,0 +1,105 @@
+
+.switch {
+	position: relative;
+	display: inline-block;
+	height: @30px;
+	width: @60px;
+	background-color:transparent;
+	border-radius: @30px;
+	transition-duration: .2s;
+	transition-property: background-color, border;
+	border-width:@1px;
+	border-style:solid;
+	
+	border-color:#e5e5e5;
+	/*关闭状态文字off*/
+	&:after{
+		position: absolute;
+		right: @11px;
+		top:50%;
+		transform:translateY(-50%);
+		content: attr(data-off);
+		
+		color: @placeholder;
+	}
+	/*关闭状态圆点*/
+	.switch-handle{
+		pointer-events:none;
+		position: absolute;
+		left:0;
+		top:50%;
+		transform:translate(@4px,-50%);
+		width: @20px;
+		height: @20px;
+		border-radius: @100px;
+		transition-duration: .2s;
+		transition-property:transform, border, width;
+		
+		background-color:#e5e5e5;
+	}
+	/*打开状态*/
+	&.active {
+		background-color:transparent;
+		/*打开状态文字on*/
+		&:after{
+			right: auto;
+			left: @11px;
+			content: attr(data-on);
+
+			color: @placeholder;
+		}
+		/*打开状态小圆点*/
+		.switch-handle{
+			left:0;
+			top:50%;
+			transform: translate(@34px,-50%);
+
+			background-color: @success;
+		}
+	}
+	/*开关控件toggle-反转*/
+	&.reverse{
+		border:none;
+		background-color:white;
+		box-shadow: inset 0 0 0 @1px #e5e5e5;
+		
+		.switch-handle{
+			width: @26px;
+			height: @26px;
+			transform: translate(@2px,-50%);
+
+			background-color:white;
+			box-shadow: @2px @2px @2px rgba(0,0,0,.21);
+		}
+		&.active{
+			background-color:@success;
+			box-shadow: none;
+			&:after{
+				color:white;
+			}
+			.switch-handle{
+				transform: translate(@32px,-50%);
+				box-shadow: @2px @2px @4px rgba(0,0,0,.21);
+				background-color:white;
+			}
+		}
+		&:after{
+			color:@placeholder;
+		}
+	}
+}
+/*开关控件toggle-无文字*/
+.notext.switch{
+	width: @50px;
+	&.active{
+		.switch-handle{
+			 transform: translate(@24px,-50%);
+		}
+	}
+	&:after{
+		content:none;
+	}
+	&.reverse.active .switch-handle{
+		transform: translate(@22px,-50%);
+	}
+}
