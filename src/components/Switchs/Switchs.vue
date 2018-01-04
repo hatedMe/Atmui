@@ -1,8 +1,10 @@
 
 
 <template>
-    
-    <Switchs v-model="isTrue" :reverse="reverse"></Switchs>
+    <div>
+        <p>基础演示</p>
+        <Switchs></Switchs>
+    </div>
 
 </template>
 

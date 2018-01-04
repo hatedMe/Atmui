@@ -32,9 +32,15 @@
 
 ```javascript
 
-    import { Switchs } from 'atmui';
+import { Switchs } from 'atmui';
 
-    <Switchs></Switchs>
+// 基础
+<Switchs></Switchs>
+
+
+
+
+
     
 ```
 
