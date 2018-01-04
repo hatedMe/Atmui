@@ -1,9 +1,9 @@
 
 
 <template>
-    <div class="switch" :data-on="on" :data-off="off" @click="changeHandle($event)">
+    <div class="switch" :class=" reverse ? 'reverse' : ''" :data-on="on" :data-off="off" @click="changeHandle($event)">
         <div class="switch-handle"></div>
-        <input type="text" name="" :value="currentValue">
+        <input type="hidden" :name="name" :value="currentValue">
     </div>
 </template>
 
@@ -12,9 +12,9 @@
 <script>
     export default {
         name: 'Switchs',
-        data(){
+        data() {
             return {
-                currentValue : this.value
+                currentValue: this.value
             }
         },
         props: {
@@ -27,22 +27,34 @@
                 default: ''
             },
             value: {
-                type: String,
+                type: [String, Boolean ,Number],
                 default: 'false'
+            },
+            name: {
+                type: String,
+                default: ''
+            },
+            reverse:{
+                type: Boolean,
+                default: false
             }
+        },
+        mounted () {
+            let elClassList = this.$el.classList
+            this.currentValue ? 
+            elClassList.add( 'active' ) :
+            elClassList.remove( 'active' );
         },
         methods: {
             changeHandle(event) {
                 this.$el.classList.toggle('active');
-                // this.value = !this.value;
-                // const checked = this.currentValue === this.trueValue ? this.falseValue : this.trueValue;
-                console.log( this.currentValue );
-                this.$emit('input', this.currentValue );
+                this.currentValue = !this.currentValue;
+                this.$emit('input', this.currentValue);
                 this.$emit('changeHandle', event, this.$el);
             },
         },
-        watch:{
-            value(val){
+        watch: {
+            value(val) {
                 this.currentValue = val;
             }
         }

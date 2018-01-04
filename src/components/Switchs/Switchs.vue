@@ -2,7 +2,7 @@
 
 <template>
     
-    <Switchs v-model="isTrue"></Switchs>
+    <Switchs v-model="isTrue" :reverse="reverse"></Switchs>
 
 </template>
 
@@ -13,7 +13,8 @@
         name: 'switchs',
         data(){
             return {
-                isTrue : 'true'
+                isTrue : 0,
+                reverse : true
             }
         }
     }
