@@ -18,7 +18,7 @@
                 <ListItem licon="icon-interactive">Tost遮罩</ListItem>
                 <ListItem licon="icon-like">Time时间选择</ListItem>
                 <ListItem to="/calendar" licon="icon-like">Calendar日历</ListItem>
-                
+                <ListItem to="/silder" licon="icon-interactive">Silder轮播组件</ListItem>
                 <ListItem licon="icon-interactive">Alert弹框</ListItem>
             </Lists>
         </main>

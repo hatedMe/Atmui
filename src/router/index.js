@@ -17,6 +17,8 @@ import Calendar from '../components/Calendar/Calendar.vue';
 import Utils from '../components/Utils/Utils.vue';
 import Switchs from '../components/Switchs/Switchs.vue';
 
+import Silder from '../components/Silder/Silder.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -62,5 +64,8 @@ export default new Router({
         path: '/switch',
         name:'switchs',
         component: Switchs
+    },{
+        path: '/silder',
+        component: Silder
     }]
 })
