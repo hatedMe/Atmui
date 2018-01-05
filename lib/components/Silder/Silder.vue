@@ -6,6 +6,9 @@
         <div class="slider-wrapper">
             <slot></slot>
         </div>
+        <div class="slide-pagination">
+            
+        </div>
     </div>
 </template>
 
