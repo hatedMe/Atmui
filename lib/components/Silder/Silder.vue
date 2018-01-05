@@ -7,7 +7,6 @@
             <slot></slot>
         </div>
         <div class="slide-pagination">
-            
         </div>
     </div>
 </template>
@@ -16,20 +15,8 @@
 
 
 <script>
-    import Slider from './index.js';
     export default {
-        name: 'Silder',
-        props:{
-            options: {
-                type: Object
-            }
-        },
-        mounted () {
-            
-            this.slider = new Slider(this.$el);
-
-            console.log( this.slider );
-        }
+        name: 'Silder'
     }
 </script>
 
