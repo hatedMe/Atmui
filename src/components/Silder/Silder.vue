@@ -40,6 +40,7 @@
             console.log( '销毁组件了' );
             console.log(this.swiper);
             this.swiper.Event(true);
+            this.swiper.autoplayer(false);
         }
     }
 </script>
