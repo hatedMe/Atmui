@@ -6,7 +6,6 @@
 <template>
     <div class="mask active">
         <div class="calendar">
-            
             <div class="flex flex-between flex-middle">
                 <div class="prev-month">上</div>
                 <div class="calendar-title">
@@ -25,11 +24,12 @@
                 <span>五</span>
                 <span>六</span>
             </div>
-            <div class="calendar-day flex" @click="changeDay" v-tap:swiperight="{methods : touchHandle}">
-                <span class="no-date" v-for="item in datt" v-if="item.wk == undefined && item.today == undefined">{{ item.day }}</span>
-                <span class="active_wk" v-else-if="(item.wk != undefined) && (item.wk == 0 || item.wk == 6)">{{ item.day }}</span>
-                <span class="today active" v-else-if="item.today != undefined">{{ item.day }}</span>
-                <span v-else>{{ item.day }}</span>
+            <div class="calendar-content">
+                <div class="calendar-warp">
+                    <CalendarItem :datt="datt"></CalendarItem>
+                    <CalendarItem :datt="datt"></CalendarItem>
+                    <CalendarItem :datt="datt"></CalendarItem>
+                </div>
             </div>
         </div>
     </div>
@@ -38,33 +38,37 @@
 
 
 <script>
-    import datt from './Calendar.js';
-
+    import Calendar from './index.js';
+    import CalendarItem from './CalendarItem.vue';
     export default {
         name: 'Calendar',
-        data () {
+        components: {
+            CalendarItem,
+        },
+        data() {
             return {
-                datt:datt()
+                datt: []
             }
         },
-        mounted () {
+        mounted() {
+            this.calendar = new Calendar(this.$el);
+            console.log(this.calendar);
+            this.datt = this.calendar.initUpdateWarp();
         },
         methods: {
-            changeDay(event){
-                let els = event.target.parentNode.children;
-
-                for( let i =0; i<els.length; i++ ){
-                    if( els[i].classList.contains( 'active' ) ){
-                        els[i].classList.remove('active');
-                        break ;
-                    }
-                }
-                
-                event.target.classList.add('active');
-            },
-            touchHandle(){
-                console.log( 456 );
-            }
+            // changeDay(event){
+            //     let els = event.target.parentNode.children;
+            //     for( let i =0; i<els.length; i++ ){
+            //         if( els[i].classList.contains( 'active' ) ){
+            //             els[i].classList.remove('active');
+            //             break ;
+            //         }
+            //     }
+            //     event.target.classList.add('active');
+            // },
+            // touchHandle(){
+            //     console.log( 456 );
+            // }
         }
     }
 </script>

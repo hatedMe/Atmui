@@ -30,8 +30,23 @@
     }
 }
 
+.calendar-content{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.calendar-warp{
+    position: relative;
+    overflow: hidden;
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
 .calendar-day {
     flex-wrap: wrap;
+    float: left;
     span {
         display: inline-block;
         float: left;
@@ -51,7 +66,7 @@
     }
     .no-date{
         color: #999999;
-        visibility: hidden;
+        // visibility: hidden;
     }
     .today{
         color: green;

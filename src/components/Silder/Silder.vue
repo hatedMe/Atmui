@@ -35,6 +35,11 @@
             onSlideChangeEnd(e){
                 console.log( '拖动结束的时候触发' , e );
             }
+        },
+        destroyed () {
+            console.log( '销毁组件了' );
+            console.log(this.swiper);
+            this.swiper.Event(true);
         }
     }
 </script>
