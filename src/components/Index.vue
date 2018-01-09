@@ -36,6 +36,9 @@
 <script>
     export default {
         name: 'Index',
+        mounted(){
+            console.log( this.$Atmui.device() );
+        },
         methods: {
         }
     }
