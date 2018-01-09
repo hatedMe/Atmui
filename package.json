@@ -1,6 +1,6 @@
 {
   "name": "atmui",
-  "version": "0.0.216",
+  "version": "0.0.217",
   "description": "atmui",
   "author": "Atom <7548764@qq.com>",
   "main": "dist/Atmui.js",
@@ -10,7 +10,8 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "buildAtmui":"node build/buildAtmui.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    
+
   },
   "devDependencies": {
     "vue": "^2.5.2",
