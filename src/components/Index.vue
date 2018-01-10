@@ -16,14 +16,14 @@
             <Lists>
                 <ListItem licon="icon-like">Loading加载</ListItem>
                 <ListItem licon="icon-interactive">Tost遮罩</ListItem>
-                <ListItem licon="icon-like">Time时间选择</ListItem>
-                <ListItem to="/calendar" licon="icon-like">Calendar日历</ListItem>
+                <ListItem licon="icon-label">Time时间选择</ListItem>
+                <ListItem to="/calendar" licon="icon-clock">Calendar日历</ListItem>
                 <ListItem to="/silder" licon="icon-interactive">Silder轮播组件</ListItem>
-                <ListItem licon="icon-interactive">Alert弹框</ListItem>
+                <ListItem licon="icon-systemprompt">Alert弹框</ListItem>
             </Lists>
 
             <Lists>
-                <ListItem to="/map" licon="icon-like">腾讯地图</ListItem>
+                <ListItem to="/map" licon="icon-coordinates">腾讯地图</ListItem>
                 
             </Lists>
         </main>

@@ -1,10 +1,13 @@
 
 
 <template>
-    <div>
-        <h2>当前地址</h2>
-        <p>{{ $store.state.pos }}</p>
-        <Button @click="clickHandle" type="success" long>success</Button>
+    <div class="wingpadding-xl spacepadding-xl">
+        <h2 class="spacepadding-xl">当前地址</h2>
+        <p class="spacepadding-xl">{{ $store.state.pos }}</p>
+        <p class="spacepadding-xl">
+            <Button @click="clickHandle" type="success" long>success</Button>
+        </p>
+        
     </div>
 </template>
 
