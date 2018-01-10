@@ -19,6 +19,10 @@ import Switchs from '../components/Switchs/Switchs.vue';
 
 import Silder from '../components/Silder/Silder.vue';
 
+import Map from '../components/Map/index.vue';
+import changeMap from '../components/Map/changeAdd.vue';
+import mapIndex from '../components/Map/map.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -67,5 +71,18 @@ export default new Router({
     },{
         path: '/silder',
         component: Silder
+    },{
+        path: '/map',
+        component: Map,
+        children:[
+            {
+                path: 'changeadd',
+                component: changeMap
+            },
+            {
+                path: '/',
+                component: mapIndex
+            },
+        ]
     }]
 })

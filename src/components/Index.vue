@@ -21,6 +21,11 @@
                 <ListItem to="/silder" licon="icon-interactive">Silder轮播组件</ListItem>
                 <ListItem licon="icon-interactive">Alert弹框</ListItem>
             </Lists>
+
+            <Lists>
+                <ListItem to="/map" licon="icon-like">腾讯地图</ListItem>
+                
+            </Lists>
         </main>
         <footer>
             <BarTab>
