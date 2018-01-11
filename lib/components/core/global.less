@@ -7,6 +7,11 @@
     color: @placeholder;
 }
 
+*:focus {
+    outline: none;
+    background-color: transparent;
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -24,9 +29,10 @@ body {
     word-wrap: break-word;
     cursor: pointer;
 }
-*{
-	margin: 0;
-	padding: 0;
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 article,
@@ -137,11 +143,7 @@ small {
     color: @placeholder;
 }
 
-
-
-
-
-.mask{
+.mask {
     transition-property: opacity;
     transition-duration: 300ms;
     position: absolute;
@@ -155,7 +157,7 @@ small {
     background-color: @mask-bg;
 }
 
-.onepxborder{
+.onepxborder {
     content: '';
     position: absolute;
     left: 0;

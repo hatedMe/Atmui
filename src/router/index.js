@@ -23,6 +23,8 @@ import Map from '../components/Map/index.vue';
 import changeMap from '../components/Map/changeAdd.vue';
 import mapIndex from '../components/Map/map.vue';
 
+import Form from '../components/Form/Form.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -84,5 +86,8 @@ export default new Router({
                 component: mapIndex
             },
         ]
+    },{
+        path: '/form',
+        component: Form
     }]
 })
