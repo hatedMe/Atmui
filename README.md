@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-%200.0.218%20%20-blue.svg" />
+    <img src="https://img.shields.io/badge/version-%200.0.219%20%20-blue.svg" />
     <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg" />
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
 </p>
