@@ -26,6 +26,7 @@ import mapIndex from '../components/Map/map.vue';
 import Form from '../components/Form/Form.vue';
 
 import SearchBar from '../components/SearchBar/SearchBar.vue';
+import SearchHistory from '../components/SearchHistory/SearchHistory.vue';
 
 Vue.use(Router)
 
@@ -94,5 +95,8 @@ export default new Router({
     },{
         path: '/search',
         component: SearchBar
+    },{
+        path: '/searchhistory',
+        component: SearchHistory
     }]
 })

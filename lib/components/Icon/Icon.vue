@@ -1,5 +1,5 @@
 <template>
-    <i :class="'icon '+ 'size'+size + ' ' + type "></i>
+    <i @click="clickHandle" :class="'icon '+ 'size'+size + ' ' + type "></i>
 </template>
 
 
@@ -15,6 +15,11 @@
             size: {
                 type: String,
                 default: '16'
+            }
+        },
+        methods: {
+            clickHandle(e){
+                this.$emit('click',e)
             }
         }
     }

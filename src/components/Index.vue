@@ -26,6 +26,7 @@
                 <ListItem to="/map" licon="icon-coordinates">腾讯地图</ListItem>
                 <ListItem to="/form" licon="icon-message">Form组件系列</ListItem>
                 <ListItem to="/search" licon="icon-search">SearchBar搜索栏</ListItem>
+                <ListItem to="/searchhistory" licon="icon-search">Search搜索历史列表</ListItem>
             </Lists>
         </main>
         <footer>
