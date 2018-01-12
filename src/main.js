@@ -16,7 +16,7 @@ Vue.use( Atomui )
 
 
 
-window.geoLocation = new qq.maps.Geolocation('FKLBZ-3H3AF-JDBJJ-JETM3-63SXT-QOBTM', '购懒');
+// window.geoLocation = new qq.maps.Geolocation('FKLBZ-3H3AF-JDBJJ-JETM3-63SXT-QOBTM', '购懒');
 
 
 

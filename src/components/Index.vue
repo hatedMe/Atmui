@@ -24,7 +24,8 @@
 
             <Lists>
                 <ListItem to="/map" licon="icon-coordinates">腾讯地图</ListItem>
-                <ListItem to="/form" licon="icon-coordinates">Form组件系列</ListItem>
+                <ListItem to="/form" licon="icon-message">Form组件系列</ListItem>
+                <ListItem to="/search" licon="icon-search">SearchBar搜索栏</ListItem>
             </Lists>
         </main>
         <footer>

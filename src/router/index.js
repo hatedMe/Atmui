@@ -25,6 +25,8 @@ import mapIndex from '../components/Map/map.vue';
 
 import Form from '../components/Form/Form.vue';
 
+import SearchBar from '../components/SearchBar/SearchBar.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -89,5 +91,8 @@ export default new Router({
     },{
         path: '/form',
         component: Form
+    },{
+        path: '/search',
+        component: SearchBar
     }]
 })
