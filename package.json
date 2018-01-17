@@ -1,9 +1,9 @@
 {
   "name": "atmui",
-  "version": "0.0.222",
+  "version": "0.0.223",
   "description": "atmui",
   "author": "Atom <7548764@qq.com>",
-  "main": "dist/Atmui.js",
+  "main": "dist/",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
