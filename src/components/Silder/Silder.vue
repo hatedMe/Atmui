@@ -25,7 +25,7 @@
         mounted() {
             this.swiper = new this.$Swiper(this.$el,{
                 //onSlideChange:this.onSlideChange,
-                //onSlideChangeEnd:this.onSlideChangeEnd
+                onSlideChangeEnd:this.onSlideChangeEnd
             });
         },
         methods:{
@@ -33,7 +33,7 @@
                 console.log( '拖动的时候触发' , e );
             },
             onSlideChangeEnd(e){
-                console.log( '拖动结束的时候触发' , e );
+                console.log( e.index ,'索引' );
             }
         },
         destroyed () {
