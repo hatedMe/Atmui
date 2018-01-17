@@ -28,7 +28,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'Atmui.js',
+        filename: 'index.js',
         library: 'Atmui', // 模块名称
         libraryTarget: 'umd', // 输出格式
         umdNamedDefine: true // 是否将模块名称作为 AMD 输出的命名空间
