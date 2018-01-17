@@ -24,8 +24,8 @@
         },
         mounted() {
             this.swiper = new this.$Swiper(this.$el,{
-                onSlideChange:this.onSlideChange,
-                onSlideChangeEnd:this.onSlideChangeEnd
+                //onSlideChange:this.onSlideChange,
+                //onSlideChangeEnd:this.onSlideChangeEnd
             });
         },
         methods:{

@@ -55,7 +55,7 @@
             }
         },
         mounted() {
-            this.swiper = this.$Swiper(this.$el,{
+            this.swiper = new this.$Swiper(this.$el,{
                 onSlideChange:this.onSlideChange,
                 onSlideChangeEnd:this.onSlideChangeEnd
             });
