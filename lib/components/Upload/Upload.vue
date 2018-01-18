@@ -2,7 +2,7 @@
 
 <template>
     <div class="upload-file">
-        <div class="upload-list" v-for="item,index in list" :key="index">
+        <div class="upload-list" v-for="(item,index) in list" :key="index">
             <img :src="item.reslut" alt="" />
         </div>
         <div class="upload">
@@ -11,6 +11,7 @@
                 <Icon type="icon-camera" size="32" />
             </div>
         </div>
+        <Button long  type="success" @click="clickHandle" class="wingpadding-xl spacepadding-xl">按钮</Button>
     </div>
 </template>
 
@@ -21,7 +22,8 @@
         name: 'Update',
         data() {
             return {
-                list: []
+                list: [],
+                img_file : []
             }
         },
         props: {
@@ -31,7 +33,7 @@
             },
             name:{
                 type:String,
-                default:''
+                default:'image'
             },
             accept:{
                 type:String,
@@ -45,23 +47,45 @@
         methods: {
             changeHandle(e) {
                 let This = this;
+                
                 for (let i = 0; i < e.target.files.length; i++) {
                     console.log(e.target.files);
                     let targetAttr = e.target.files[i];
                     let reader = new FileReader();
                     reader.readAsDataURL(e.target.files[i]);
-                    reader.onload = function(e) {
+                    reader.onload = function(ev) {
+                        This.img_file.push( targetAttr );
                         This.list.push({
                             lastModified: targetAttr.lastModified,
                             name: targetAttr.name,
                             size: targetAttr.size,
                             type: targetAttr.type,
-                            reslut: e.target.result
+                            reslut: ev.target.result
                         });
-                        console.log('文件读取完成', e.target);
-                        console.log(This.list);
+                        console.log('文件读取完成', ev.target);
+                        console.log(This.img_file);
                     }
                 }
+            },
+            clickHandle(ev){
+                
+                ev.preventDefault();
+                
+                let fromData = new FormData();
+                this.img_file.forEach( e => {
+                    fromData.append( 'image' , e );
+                })
+                
+                this.axios({
+                    method:'post',
+                    url:'http://localhost:4040/api/addUserInfo',
+                    headers: {'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6ImFkbWluIiwiaWF0IjoxNTE2MjYyMjk0LCJleHAiOjE1MTYyNzY2OTR9.NJN_35lUYxesfc4MmWX1T0GmDkdt9xiYobaaE81Ciow'},
+                    data:fromData
+                }).then( data =>{
+                    console.log( data );
+                }).catch( err =>{
+                    console.log( err );
+                })
             }
         }
     }

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import axios from 'axios';
 
 import store from './store/store.js'
 
@@ -13,7 +14,7 @@ import Atomui from '../lib/index.js';
 
 Vue.use( Atomui )
 
-
+Vue.prototype.axios = axios;
 
 
 // window.geoLocation = new qq.maps.Geolocation('FKLBZ-3H3AF-JDBJJ-JETM3-63SXT-QOBTM', '购懒');
