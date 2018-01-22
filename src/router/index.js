@@ -29,6 +29,7 @@ import SearchBar from '../components/SearchBar/SearchBar.vue';
 import SearchHistory from '../components/SearchHistory/SearchHistory.vue';
 
 import Upload from '../components/Upload/Upload.vue';
+import Picker from '../components/Picker/Picker.vue';
 
 Vue.use(Router)
 
@@ -103,5 +104,8 @@ export default new Router({
     },{
         path: '/upload',
         component: Upload
+    },{
+        path: '/picker',
+        component: Picker
     }]
 })

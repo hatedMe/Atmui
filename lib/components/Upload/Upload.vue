@@ -79,7 +79,7 @@
                 this.axios({
                     method:'post',
                     url:'http://localhost:4040/api/addUserInfo',
-                    headers: {'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6ImFkbWluIiwiaWF0IjoxNTE2MjYyMjk0LCJleHAiOjE1MTYyNzY2OTR9.NJN_35lUYxesfc4MmWX1T0GmDkdt9xiYobaaE81Ciow'},
+                    headers: {'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6ImFkbWluIiwiaWF0IjoxNTE2MzI0NDQ0LCJleHAiOjE1MTYzMzg4NDR9.jeNhMJ0QfPNk8FEXC-VqD1pJFU3rTKTDJtKzGsenxCA'},
                     data:fromData
                 }).then( data =>{
                     console.log( data );
