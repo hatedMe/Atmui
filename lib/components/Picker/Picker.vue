@@ -41,20 +41,18 @@
 
 
 <script>
-    import Picker from './Picker.js';
+    
+    import PickerCity from './Picker.city.js';
     import cityDate from './picker.city.data.js';
-
-    var date = [ { key:2008 ,value :2008 } , { key:2009 ,value :2009 } , { key:2010 ,value :2010 } ];
-
     // key ==> beijing // children ==> key ==> dongcheng //  children ==> key == 和平区
 
     export default {
         name: 'Picker',
         mounted () {
-            console.log( cityDate );
-            this.picker = new Picker(this.$el);
-
-            this.picker.addSolt(  cityDate,undefined )
+            this.picker = new PickerCity( this.$el , {
+                data : cityDate
+            } );
+            // this.picker.addSolt(  cityDate,undefined )
         }
     }
 </script>
