@@ -6,8 +6,8 @@
 <template>
     <div class="picker active">
         <div class="picker-header">
-            <a class="picker-cancel">取消</a>
-            <a class="picker-done">完成</a>
+            <a class="picker-cancel">{{ headerCancelText }}</a>
+            <a class="picker-done">{{ headerDoneText }}</a>
         </div>
         <div class="picker-wrapper">
             <div class="picker-layer">
@@ -15,24 +15,6 @@
                 </div>
             </div>
             <div class="picker-slotbox text-center">
-                <!-- <ul class="picker-slot text-center">
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                </ul>
-                <ul class="picker-slot text-center">
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                </ul>
-                <ul class="picker-slot text-center">
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                    <li>2008</li>
-                </ul> -->
             </div>
         </div>
     </div>
@@ -41,18 +23,21 @@
 
 
 <script>
-    
-    import PickerCity from './Picker.city.js';
-    import cityDate from './picker.city.data.js';
-    // key ==> beijing // children ==> key ==> dongcheng //  children ==> key == 和平区
-
+    import PickerDate from './Picker.date.js';
     export default {
         name: 'Picker',
-        mounted () {
-            this.picker = new PickerCity( this.$el , {
-                data : cityDate
-            } );
-            // this.picker.addSolt(  cityDate,undefined )
+        props: {
+            headerCancelText: {
+                type: String,
+                default: '取消'
+            },
+            headerDoneText: {
+                type: String,
+                default: '确定'
+            }
+        },
+        mounted() {
+            this.picker = new PickerDate(this.$el);
         }
     }
 </script>
