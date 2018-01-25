@@ -29,6 +29,7 @@
                 <ListItem to="/searchhistory" licon="icon-search">Search搜索历史列表</ListItem>
                 <ListItem to="/upload" licon="icon-picture">Upload文件上传</ListItem>
                 <ListItem to="/picker" licon="icon-flip">Picker选择</ListItem>
+                <ListItem to="/uprefresh" licon="icon-flip">上拉刷新</ListItem>
             </Lists>
         </main>
         <footer>

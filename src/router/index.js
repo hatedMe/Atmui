@@ -31,6 +31,8 @@ import SearchHistory from '../components/SearchHistory/SearchHistory.vue';
 import Upload from '../components/Upload/Upload.vue';
 import Picker from '../components/Picker/Picker.vue';
 
+import Uprefresh from '../components/Uprefresh/Uprefresh.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -107,5 +109,8 @@ export default new Router({
     },{
         path: '/picker',
         component: Picker
+    },{
+        path:'/uprefresh',
+        component:Uprefresh
     }]
 })
