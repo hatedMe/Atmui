@@ -1,7 +1,7 @@
 
 
 <template>
-    <div>
+    <div class="iscroll-box">
         <Lists>
             <ListItem v-for="(item,index) in list" :key="index">{{ item }}</ListItem>
         </Lists>
@@ -10,17 +10,26 @@
 
 
 <script>
-
     import Iscroll from './Iscroll.js';
     export default {
         name: 'Uprefresh',
-        data () {
+        data() {
             return {
-                list: [ 1,2,3,4,5,6,7,8,9 ]
+                list: [
+                    1, 2, 3, 4, 5, 6, 7, 8, 9,
+                    1, 2, 3, 4, 5, 6, 7, 8, 9
+                ]
             }
         },
-        mounted () {
-            new Iscroll( this.$el )
+        mounted() {
+            new Iscroll(this.$el)
         }
     }
 </script>
+
+
+<style lang="less">
+    .iscroll-box {
+        border: 1px solid red;
+    }
+</style>
