@@ -16,12 +16,14 @@
         data() {
             return {
                 list: [
-                    1, 2, 3, 4, 5, 6, 7, 8, 9,
-                    1, 2, 3, 4, 5, 6, 7, 8, 9
+                    
                 ]
             }
         },
         mounted() {
+            for( let i = 0; i< 206 ;i++ ){
+                this.list.push(i);
+            }
             new Iscroll(this.$el)
         }
     }
