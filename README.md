@@ -8,37 +8,63 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-%200.1.01%20%20-blue.svg" />
+    <img src="https://img.shields.io/badge/version-%200.1.12%20%20-blue.svg" />
     <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg" />
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
 </p>
 
-<p align="center">Mobile UI Components, based on Vue.js and CSS.</p>
+<p align="center">一个基于VUEJS高质量移动端UI组件库</p>
 
 
-> 每天一点写VUE组件
+> 一个基于VUEJS高质量移动端UI组件库。
+> 自由灵活地使用空间。
+> 开箱即用，高质量，功能丰富的组件库。
+> 极致的UI体系，css3处理动效。
 
-## Components
-- Alert
-- BarTab
-- Button
-- Icon
-- Input
-- Loading
-- Tab
-- List
-- TabBar
-- Switchs
-- Silder
+## 基础组件
+- Button按钮组件
+- Tab组件
+- Icon图标组件
+- Input表单组件
+- List列表组件
+- Switch组件
+
+## 交互组件
+- Loading加载
+- Tost遮罩
+- Time时间选择
+- Calendar日历
+- Silder轮播组件
+- Alert弹框
+
+## 复合组件
+- Map地图组件
+- Form组件系列
+- SearchBar搜索栏
+- Search搜索历史列表
+- Upload文件上传
+- Picker自定义选择
+- Picker地区选择
+- Picker时间选择
+- pullUP上拉刷新
+- pullDown下拉加载
 
 
-## Getting started
 
-quick start with vue-cli.
+## 使用方法
+
+> 在安装vue-cli的脚手架之后,安装```atmui```享受开箱即用之旅
 
 ```npm install atmui --save```
 
-```npm run dev ```
+
+```javascript
+
+import Atmui from 'atmui';
+import 'atmui/static/css/main.css';
+Vue.use( Atmui );
+
+``` 
 
 
 
