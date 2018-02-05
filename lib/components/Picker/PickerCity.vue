@@ -44,8 +44,8 @@
     
     import PickerSlot from './PickerSlot.vue';
 
-    import PickerCity from './Picker.city.js';
-    import cityDate from './picker.city.data.js';
+    import PickerCity from './class.picker.city.js';
+    import cityDate from './data.picker.city.js';
 
     export default {
         name: 'PickerCity',

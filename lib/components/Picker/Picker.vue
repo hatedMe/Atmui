@@ -4,7 +4,7 @@
 
 
 <template>
-    <div class="picker active">
+    <div class="picker">
         <div class="picker-header">
             <a class="picker-cancel">{{ headerCancelText }}</a>
             <a class="picker-done">{{ headerDoneText }}</a>
@@ -23,7 +23,7 @@
 
 
 <script>
-    import PickerDate from './Picker.date.js';
+    // import PickerDate from './class.picker.date.js';
     export default {
         name: 'Picker',
         props: {
@@ -37,7 +37,7 @@
             }
         },
         mounted() {
-            this.picker = new PickerDate(this.$el);
+            // this.picker = new PickerDate(this.$el);
         }
     }
 </script>
