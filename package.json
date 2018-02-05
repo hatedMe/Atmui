@@ -1,6 +1,6 @@
 {
   "name": "atmui",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "atmui",
   "author": "Atom <7548764@qq.com>",
   "main": "dist/",
