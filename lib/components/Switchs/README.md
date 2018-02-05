@@ -17,8 +17,8 @@
 |on |打开的时候显示文字  |String |-   |
 |off |关闭的时候显示文字  |String | -    |
 |name |同表单的name属性  |String |-   |
-|value | 同表单的value属性，可以控制switch初始为开还是关,可以使用v-model绑定  | [ String Number Boolean] 可以使用 true false 0 1 |- false  |
-|reverse | 是否反转色 | Boolean 可以使用 true false |- false  |
+|value | 同表单的value属性，可以控制switch初始为开还是关,可以使用v-model绑定  | [ String Number Boolean] 可以使用 (true false) , (0 1) | false  |
+|reverse | 是否反转色 | Boolean 可以使用 true false | false  |
 
 
 **事件：**
