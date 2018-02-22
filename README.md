@@ -8,11 +8,11 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-%200.1.13%20%20-blue.svg" />
-    <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg" />
-    <img src="https://img.shields.io/npm/dm/atmui.svg?maxAge=2592000&style=flat-square" />
-    <img src="https://img.shields.io/npm/v/atmui.svg?maxAge=2592000&style=flat-square" />
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
+    <img src="https://img.shields.io/badge/version-%200.1.13%20%20-blue.svg?style=flat-square" />
+    <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg?style=flat-square" />
+    <img src="https://img.shields.io/npm/dy/atmui.svg?style=flat-square" />
+    <img src="https://img.shields.io/npm/v/atmui.svg?style=flat-square" />
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" />
 </p>
 
 <p align="center">一个基于VUEJS高质量移动端UI组件库</p>
