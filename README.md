@@ -10,6 +10,8 @@
 <p align="center">
     <img src="https://img.shields.io/badge/version-%200.1.13%20%20-blue.svg" />
     <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg" />
+    <img src="https://img.shields.io/npm/dm/atmui.svg?maxAge=2592000&style=flat-square" />
+    <img src="https://img.shields.io/npm/v/atmui.svg?maxAge=2592000&style=flat-square" />
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
 </p>
 
