@@ -1,12 +1,11 @@
 
 .alert-mask{
-	z-index:10;
+	z-index:999;
 }
 .alert{
 	position:absolute;
 	border-style:solid;
 	border-width:0;
-
 	top:50%;
 	left:50%;
     width: 270px;
@@ -49,6 +48,8 @@
 	text-align:center;
 	white-space:nowrap;
 	font-size:0;
+	border-top: 1px solid #f0f0f0;
+	box-sizing:border-box;
 	a{
 		position: relative;
 		width:50%;
@@ -57,5 +58,8 @@
 		padding:@12px;
 		font-size:@font-size-md;
 		box-sizing:border-box;
+		&:first-child{
+			border-right: 1px solid #f0f0f0;
+		}
 	}
 }

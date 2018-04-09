@@ -19,7 +19,7 @@
                 <ListItem licon="icon-label">Time时间选择</ListItem>
                 <ListItem to="/calendar" licon="icon-clock">Calendar日历</ListItem>
                 <ListItem to="/silder" licon="icon-interactive">Silder轮播组件</ListItem>
-                <ListItem licon="icon-systemprompt">Alert弹框</ListItem>
+                <ListItem @click="alertHandle" licon="icon-systemprompt">Alert弹框</ListItem>
             </Lists>
 
             <Lists>
@@ -50,6 +50,19 @@
             console.log( this.$Atmui.device() );
         },
         methods: {
+            alertHandle(){
+                let This = this;
+                this.$Alert.show({
+                    text : '请输入你的模态框信息',
+                    onCancel: function(){
+                        console.log( '关闭' );
+                    },
+                    onSubmit : function () {
+                        console.log( '确定' );
+                        
+                    }
+                })
+            }
         }
     }
 </script>

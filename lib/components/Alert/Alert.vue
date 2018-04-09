@@ -30,7 +30,7 @@
         props:{
             text:{
                 type:String,
-                default:'最简单的方法就是先备份编辑前的文档？'
+                default:'我是带有提示框的模态框。'
             },
             cancelText : {
                 type:String,
@@ -43,17 +43,12 @@
         },
         methods: {
             onSubmitHandle(){
-                console.log('事件触发了。');
                 this.$emit('onSubmitHandle')
             },
             onCancelHandle(){
                 this.mask = false;
                 this.active = false;
-                //console.log( this.$el );
                 this.$emit('onCancelHandle')
-                console.log( this );
-                //document.body.removeChild(this.$el);
-                
             }
         }
     }

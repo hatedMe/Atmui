@@ -1,7 +1,7 @@
 
 
 <template>
-    <li class="list-item">
+    <li class="list-item" @click="clickHandle">
         <div v-if="!to" class="list-item-inner">
             <p class="list-main-title">
                 <Icon v-if="licon" :type="licon" size="24" />
@@ -45,6 +45,11 @@
             to:{
                 type: String,
                 default: ''
+            }
+        },
+        methods: {
+            clickHandle(ev){
+                this.$emit('click' ,ev)
             }
         }
     }
