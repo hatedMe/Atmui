@@ -33,6 +33,8 @@ import Picker from '../components/Picker/Picker.vue';
 
 import Uprefresh from '../components/Uprefresh/Uprefresh.vue';
 
+import Swipeout from '../components/Swipeout/Swipeout.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -112,5 +114,8 @@ export default new Router({
     },{
         path:'/uprefresh',
         component:Uprefresh
+    },{
+        path:'/swipeout',
+        component : Swipeout
     }]
 })
