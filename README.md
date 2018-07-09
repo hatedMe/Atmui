@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-%200.1.141%20%20-blue.svg?style=flat-square" />
+    <img src="https://img.shields.io/badge/version-%200.1.2%20%20-blue.svg?style=flat-square" />
     <img src="https://img.shields.io/badge/vue-%202.5.2%20-green.svg?style=flat-square" />
     <img src="https://img.shields.io/npm/dy/atmui.svg?style=flat-square" />
     <img src="https://img.shields.io/npm/v/atmui.svg?style=flat-square" />
@@ -37,7 +37,7 @@
 - Time时间选择
 - Calendar日历
 - Silder轮播组件
-- Alert弹框
+- Dialog弹框
 
 ## 复合组件
 - Map地图组件

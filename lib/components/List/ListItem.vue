@@ -2,7 +2,7 @@
 
 <template>
     <li class="list-item" @click="clickHandle">
-        <div v-if="!to" class="list-item-inner">
+        <!-- <div v-if="!to" class="list-item-inner">
             <p class="list-main-title">
                 <Icon v-if="licon" :type="licon" size="24" />
                 <slot>{{ mainTitle }}</slot>
@@ -11,8 +11,8 @@
                 <span v-if="subtitle">{{ subtitle }}</span>
                 <Icon type="icon-enter" size="20" />
             </p>
-        </div>
-        <router-link v-else :to="to" class="list-item-inner">
+        </div> -->
+        <router-link :tag="target" :to="to ? to : ''" class="list-item-inner">
             <p class="list-main-title">
                 <Icon v-if="licon" :type="licon" size="24" />
                 <slot>{{ mainTitle }}</slot>
@@ -29,7 +29,13 @@
 <script>
     export default {
         name: 'ListItem',
+        data () {
+            return {
+                target : this.to ? 'a' : 'div'
+            }
+        },
         props: {
+
             mainTitle: {
                 type: String,
                 default: ''
@@ -42,9 +48,7 @@
                 type: String,
                 default: ''
             },
-            to:{
-                required: true
-            }
+            to:[String,Object]
         },
         methods: {
             clickHandle(ev){

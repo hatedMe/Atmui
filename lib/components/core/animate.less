@@ -1,0 +1,125 @@
+
+
+
+
+
+
+.animate-mode(@duration) {
+	animation-duration: @duration;
+	animation-fill-mode: forwards;
+}
+
+.animate-name(@animateName) {
+	animation-name: @animateName;
+}
+
+
+
+
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1.2, 1.2);
+        transform: translate(-50%, -50%) scale(1.2, 1.2);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1, 1);
+        transform: translate(-50%, -50%) scale(1, 1);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+        transform: translate(-50%, -50%) scale(0.8, 0.8);
+    }
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+@keyframes bounce-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -75%);
+        transform: translate(-50%, -75%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@keyframes bounce-out-up {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -75%);
+        transform: translate(-50%, -75%);
+    }
+}
+
+
+@keyframes bounce-in-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -24px);
+        transform: translate(-50%, -24px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -20px);
+        transform: translate(-50%, -20px);
+    }
+}
+
+
+@keyframes bounce-out-down {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -20px);
+        transform: translate(-50%, -20px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+}
