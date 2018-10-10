@@ -1,6 +1,12 @@
 <template>
 <div class="dialog" :class="value ? 'dialog-open' : 'dialog-close'" v-if="value">
-    <div class="dialog-overlay"></div>
+    <template v-if="closeOnClickOverlay">
+        <div class="dialog-overlay" @click="handleAction('cancel',$event)"></div>
+    </template>
+    <template v-else>
+        <div class="dialog-overlay"></div>
+    </template>
+    
     <div class="dialog-content">
         <div class="dialog-content-hd" v-if="titleShow">
             <h3 class="dialog-content-title">{{ title }}</h3>
@@ -30,28 +36,15 @@ export default {
         showConfirmButton :Boolean,
         showCancelButton : Boolean,
         closeOnClickOverlay : Boolean,
-        callback : Function,
-        title: {
-            type: String,
-            default: '提示'
-        },
-        text :{
-            type : String,
-            default : ''
-        },
-        cancelText: {
-            type: String,
-            default: '取消'
-        },
-        submitText: {
-            type: String,
-            default: '确定'
-        },
-        // callback: Function,
+        title: String,
+        text :String,
+        cancelText: String,
+        submitText: String,
+        callback: Function,
     },
     methods: {
         handleAction(action , e){
-            console.log( action , e );
+            // console.log( action , e );
             this.onClose(action);
         },
         onClose (action){

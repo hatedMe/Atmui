@@ -38,7 +38,7 @@
 
 
 <script>
-    import Calendar from './index.js';
+    import CalendarObj from './index.js';
     import CalendarItem from './CalendarItem.vue';
     export default {
         name: 'Calendar',
@@ -51,9 +51,9 @@
             }
         },
         mounted() {
-            this.calendar = new Calendar(this.$el);
-            console.log(this.calendar);
-            this.datt = this.calendar.initUpdateWarp();
+            // this.calendar = new CalendarObj(this.$el);
+            // console.log(this.calendar);
+            // this.datt = this.calendar.initUpdateWarp();
         },
         methods: {
             // changeDay(event){
