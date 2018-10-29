@@ -61,7 +61,15 @@ const webpackConfig = merge(baseWebpackConfig, {
             to: config.build.assetsSubDirectory,
             ignore: ['.*']
         }])
-    ]
+    ],
+    externals: {
+        vue: {
+            root: 'Vue',
+            commonjs: 'vue',
+            commonjs2: 'vue',
+            amd: 'vue'
+        }
+    },
 })
 
 
