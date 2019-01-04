@@ -5,7 +5,7 @@ module.exports = {
     // to edit target browsers: use "browserslist" field in package.json
     "postcss-import": {},
     "autoprefixer": {
-      "browsers": ["iOS >= 8", "Android >= 5"]
+      // "browsers": ["iOS >= 4", "Android >= 5"]
     }
   }
 }
