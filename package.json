@@ -1,25 +1,30 @@
 {
   "name": "atmui",
   "version": "0.1.5",
-  "private": true,
+  "description": "atmui",
+  "author": "Atom <7548764@qq.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:test": "vue-cli-service build --mode test",
-    "build:prod": "vue-cli-service build --mode production && node server/build-zip.js ",
-    "deploy-test": "yarn run build:test && node server/deploy.js",
-    "lib": "vue-cli-service build --mode production --target lib --name hello --dest libs package/index.js"
+    "lib": "vue-cli-service build --mode production --target lib --name index --dest libs package/index.js"
   },
   "dependencies": {
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatedMe/Atmui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hatedMe/Atmui/issues"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "vue": "^2.6.10",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-router": "^4.0.0",
-    "@vue/cli-plugin-vuex": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "core-js": "^3.4.3",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   }
 }

@@ -1,32 +1,9 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
-import router from './router'
-
-import axios from 'axios';
-
-import store from './store/store.js'
-
+import App from './App.vue'
+import bem from './utils/create/bem';
+const b = bem('atmui');
 Vue.config.productionTip = false
-
-import Atomui from '../lib/index.js';
-
-Vue.use( Atomui )
-
-Vue.prototype.axios = axios;
-
-
-// window.geoLocation = new qq.maps.Geolocation('FKLBZ-3H3AF-JDBJJ-JETM3-63SXT-QOBTM', '购懒');
-
-
-
-
-/* eslint-disable no-new */
+Vue.prototype.b = b;
 new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
-})
+  render: h => h(App),
+}).$mount('#app')

@@ -9,9 +9,9 @@ module.exports = {
     productionSourceMap: false,
 	configureWebpack : config => {
         Object.assign( config , {
-            output: {
-                libraryExport: 'default'
-            }
+            // output: {
+            //     libraryExport: 'default'
+            // }
         });
     },
 }
