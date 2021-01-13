@@ -1,36 +1,52 @@
 
 
+
+
+
 <template>
-    <div class="">
-        <Button @click="showHandle" long type="wait">显示</Button>
-        <Button @click="hidekHandle" long type="wait">隐藏</Button>
+    <div class="picker">
+        <div class="picker-header">
+            <a class="picker-cancel">{{ headerCancelText }}</a>
+            <a class="picker-done">{{ headerDoneText }}</a>
+        </div>
+        <div class="picker-wrapper">
+            <div class="picker-layer">
+                <div class="picker-layer-frame">
+                </div>
+            </div>
+            <div class="picker-slotbox text-center">
+            </div>
+        </div>
     </div>
 </template>
 
 
 
 <script>
+    // import PickerDate from './class.picker.date.js';
     export default {
-        mounted () {
-            console.log( this );
-            this.picker = new this.$Picker('Date',{
-                onDateClickDone : this.onDateClickDone,
-            });
-        },
-        methods: {
-            showHandle(e){
-                console.log( e );
-                this.picker.show();
+        name: 'Picker',
+        props: {
+            headerCancelText: {
+                type: String,
+                default: '取消'
             },
-            hidekHandle(e){
-                this.picker.hide();
-                console.log( this );
-            },
-            onDateClickDone(e){
-                console.log( '日期时间' ,e.activeText);
+            headerDoneText: {
+                type: String,
+                default: '确定'
             }
+        },
+        mounted() {
+            // this.picker = new PickerDate(this.$el);
         }
     }
 </script>
+
+
+<style lang="less">
+
+</style>
+
+
 
 

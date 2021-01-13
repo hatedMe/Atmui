@@ -1,43 +1,51 @@
 
 
 
+
+
+
 <template>
-    <div class="loading-warp">
-        <Button type="success" @click="clickHandle">基础</Button>
-        <Button type="success" @click="clickHandle2">改变文字</Button>
+    <div class="mask">
+        <div class="loading-floating">
+            <div class="loading-floating-wrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loading-floating-text">{{ text }}</p>
+        </div>
     </div>
 </template>
 
 
 
-
 <script>
     export default {
-        name: 'Loading',
+        name:'Loading',
+        props:{
+            text:{
+                type:String,
+                default : '加载中'
+            }
+        },
+        destroyed () {
+            document.body.removeChild(this.$el)
+        },
         methods: {
-            clickHandle(){
-                console.log( 123 );
-                this.$Loading.show();
-                setTimeout( () =>{
-                    this.$Loading.hide()
-                },1000)
+            show(config){
+                this.text = typeof config == 'object' ? config.text : this.text;
+                document.body.appendChild(this.$el);
             },
-
-            clickHandle2(){
-                this.$Loading.show({
-                    text:"数据处理中"
-                });
-                setTimeout( () =>{
-                    this.$Loading.hide()
-                },1000)
+            hide(){
+                setTimeout(() => {
+                    this.$destroy()
+                })
             }
         }
     }
 </script>
-
-
-<style lang="less">
-    .loading-warp {
-        padding: 12px;
-    }
-</style>

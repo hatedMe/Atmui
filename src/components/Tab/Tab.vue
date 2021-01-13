@@ -1,30 +1,55 @@
+
+
 <template>
-    <div>
-        <Tab :tabTitle="tabTitle" @handleClick="handleClick">
-            <TabItem>全部</TabItem>
-            <TabItem>待付款</TabItem>
-            <TabItem>已经发货</TabItem>
-        </Tab>
+    <div class="tab-content">
+        <div class="buttons-tab">
+            <a v-for="(item,index) in tabTitle" :class="{active:index == isShowTab}" class="tab-link" @click="handleClick(index,$event)">{{ item }}</a>
+        </div>
+        <div class="tabs">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
 
-
-
 <script>
     export default {
-        naem: 'Tab',
+        name:'Tab',
         data(){
             return {
-                tabTitle : ['全部','待付款','已发货']
+                isShowTab: 0
+            }
+        },
+        props:{
+            tabTitle:{
+                type:Array
             }
         },
         methods:{
-            handleClick( event,index ){
-                console.log(index,event);
+            handleClick(index,event){
+                this.isShowTab = index;
+
+                let Parent = document.querySelector('.tab-content');
+                let tabContent = Parent.querySelectorAll('.tab');
+
+                
+                for( let i =0; i<tabContent.length; i++ ){
+                    if( i == this.isShowTab ){
+                        tabContent[i].classList.add('active');
+                    }else{
+                        tabContent[i].classList.remove('active');
+                    }
+                }
+
+                this.$emit('handleClick',event,index);
+                
             }
+        },
+        mounted() {
+            let Parent = document.querySelector('.tab-content');
+            let tabContent = Parent.querySelectorAll('.tab');
+            tabContent[this.isShowTab].classList.add('active')
         }
     }
 </script>
-
 

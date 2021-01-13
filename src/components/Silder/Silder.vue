@@ -1,11 +1,14 @@
 
 
+
 <template>
-    <Silder>
-        <SilderItem v-for="(item,index) in list" :key="index">
-            <img class="slide-banner" :src="item" alt="">
-        </SilderItem>
-    </Silder>
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <slot></slot>
+        </div>
+        <div class="slide-pagination">
+        </div>
+    </div>
 </template>
 
 
@@ -13,37 +16,12 @@
 
 <script>
     export default {
-        data() {
-            return {
-                list: [
-                    '../../../static/img/1.jpg',
-                    '../../../static/img/2.jpg',
-                    '../../../static/img/3.jpg'
-                ]
-            }
-        },
-        mounted() {
-            this.swiper = new this.$Swiper(this.$el,{
-                //onSlideChange:this.onSlideChange,
-                onSlideChangeEnd:this.onSlideChangeEnd
-            });
-        },
-        methods:{
-            onSlideChange(e){
-                console.log( '拖动的时候触发' , e );
-            },
-            onSlideChangeEnd(e){
-                console.log( e.index ,'索引' );
-            }
-        },
-        destroyed () {
-            console.log( '销毁组件了' );
-            console.log(this.swiper);
-            this.swiper.Event(true);
-            this.swiper.autoplayer(false);
-        }
+        name: 'Silder'
     }
 </script>
+
+
+
 
 
 
