@@ -27,7 +27,14 @@ module.exports = {
         "plugin:vue/vue3-recommended",
         "prettier",
     ],
-    plugins: ["node", "promise", "vue", "html", "prettier", "@typescript-eslint"],
+    plugins: [
+        "node",
+        "promise",
+        "vue",
+        "html",
+        "prettier",
+        "@typescript-eslint",
+    ],
     rules: {
         "prettier/prettier": "error",
         indent: "off",
@@ -74,6 +81,6 @@ module.exports = {
         "vue/v-on-event-hyphenation": "off",
         "no-var": 2,
         "prefer-const": 2,
-        "no-prototype-builtins": "off"
+        "no-prototype-builtins": "off",
     },
 };
