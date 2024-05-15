@@ -5,13 +5,15 @@
   "author": "Atom <7548764@qq.com>",
   "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --mode production --target lib --name index --dest libs package/index.js"
+    "dev": "pnpm --dir ./packages/doc dev",
+    "lint": "eslint \"./packages/**/*.{vue,ts,tsx,js,mjs,cjs}\" --fix"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/hatedMe/Atmui.git"
+  },
+  "engines": {
+    "pnpm": ">= 9.0.0"
   },
   "bugs": {
     "url": "https://github.com/hatedMe/Atmui/issues"
@@ -22,6 +24,8 @@
     "husky": "^9.0.11",
     "lint-staged": "^10.5.2",
     "prettier": "^3.2.5",
-    "stylelint": "^16.5.0"
-  }
+    "stylelint": "^16.5.0",
+    "eslint-config": "workspace:*"
+  },
+  "packageManager": "pnpm@9.1.1"
 }
