@@ -1,12 +1,10 @@
-
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 export default defineComponent({
-    name: 'AtButton',
-    props : {
-    },
+    name: "AtButton",
+    props: {},
     setup() {
-        return () => {  
+        return () => {
             return <div>button</div>;
-        }
-    }
+        };
+    },
 });
